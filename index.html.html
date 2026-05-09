@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chủ Quyền Biển Đảo & Biên Giới Việt Nam 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Lora:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --red:#DA251D;--gold:#FFCD00;--gold-bright:#FFCA28;--gold-dim:#C8A415;
+  --dark-red:#8B0000;--navy:#0B1D3A;
+  --sea:#0077B6;--cream:#FEFCF7;
+  --ocean-deep:#0A1628;--ocean-mid:#0F2847;--ocean-light:#1A4B7A;
+  --wave-1:#1565C0;--coral:#FF6B6B;--coral-dark:#D32F2F;
+  --jade:#26A69A;--jade-light:#4DB6AC;--star-red:#E53935;
+  --bg-dark:#080C18;--card-dark:#111828;--card-dark2:#1A2235;
+  --text-dark:#E0E4EC;--muted-dark:#7B8BA8;
+  --glass:rgba(255,255,255,0.06);--glass-border:rgba(255,255,255,0.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--cream);color:#1a1a2e;overflow-x:hidden;line-height:1.75}
+.dark body{background:var(--bg-dark);color:var(--text-dark)}
+
+/* ======== HERO ======== */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:linear-gradient(160deg,#6B0F0F 0%,var(--red) 45%,#B71C1C 100%);overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 45%,rgba(255,205,0,0.12) 0%,transparent 55%),radial-gradient(ellipse at 75% 70%,rgba(255,205,0,0.08) 0%,transparent 45%);pointer-events:none}
+.hero-star{width:72px;height:72px;margin-bottom:18px;animation:pulseStar 2.5s ease-in-out infinite;filter:drop-shadow(0 0 24px rgba(255,205,0,0.5))}
+@keyframes pulseStar{0%,100%{transform:scale(1);filter:drop-shadow(0 0 24px rgba(255,205,0,0.5))}50%{transform:scale(1.12);filter:drop-shadow(0 0 40px rgba(255,205,0,0.8))}}
+.hero h1{font-family:'Philosopher',serif;font-size:clamp(1.6rem,5vw,3.2rem);color:var(--gold);text-shadow:0 3px 12px rgba(0,0,0,0.3);margin-bottom:10px;letter-spacing:2px;position:relative;z-index:1}
+.hero .subtitle{font-size:clamp(0.9rem,2.5vw,1.25rem);color:rgba(255,255,255,0.88);font-weight:300;max-width:680px;position:relative;z-index:1;margin-bottom:8px}
+.hero .badge{display:inline-block;background:rgba(255,205,0,0.18);border:1px solid rgba(255,205,0,0.35);color:var(--gold);padding:6px 18px;border-radius:30px;font-size:0.85rem;font-weight:600;margin-top:10px;position:relative;z-index:1}
+.scroll-hint{position:absolute;bottom:28px;animation:bounce 2s infinite;color:var(--gold);font-size:1.4rem;cursor:pointer;text-decoration:none}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+
+/* ======== NAV ======== */
+.nav-bar{position:sticky;top:0;z-index:100;background:rgba(254,252,247,0.96);backdrop-filter:blur(12px);border-bottom:2px solid var(--red);padding:0 12px;overflow-x:auto;display:flex;justify-content:center;-webkit-overflow-scrolling:touch}
+.dark .nav-bar{background:rgba(8,12,24,0.96);border-bottom-color:var(--gold)}
+.nav-bar a{display:inline-block;padding:13px 16px;color:var(--dark-red);text-decoration:none;font-weight:600;font-size:13px;white-space:nowrap;border-bottom:3px solid transparent;transition:all .25s}
+.dark .nav-bar a{color:var(--gold)}
+.nav-bar a:hover,.nav-bar a.active{border-bottom-color:var(--red);color:var(--red)}
+.dark .nav-bar a:hover,.dark .nav-bar a.active{border-bottom-color:var(--gold);color:#fff}
+.nav-bar a.quiz-link{color:#fff;background:var(--red);border-radius:20px;padding:8px 16px;margin:5px 4px;border-bottom:none}
+.dark .nav-bar a.quiz-link{background:var(--gold);color:var(--ocean-deep)}
+.nav-bar a.quiz-link:hover{opacity:.85}
+
+/* ======== SECTIONS ======== */
+.section{max-width:1100px;margin:0 auto;padding:56px 20px}
+.section-title{font-family:'Philosopher',serif;font-size:clamp(1.4rem,3.8vw,2.2rem);color:var(--dark-red);margin-bottom:6px;position:relative;display:inline-block}
+.dark .section-title{color:var(--gold)}
+.section-title::after{content:'';display:block;width:55px;height:4px;background:var(--gold);margin-top:8px;border-radius:2px}
+.section-desc{color:#555;margin-bottom:36px;font-size:0.95rem;max-width:700px}
+.dark .section-desc{color:var(--muted-dark)}
+
+/* ======== STATS ======== */
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:16px;margin:28px 0;text-align:center}
+.stat-box{padding:18px 10px;background:#fff;border-radius:14px;box-shadow:0 3px 14px rgba(0,0,0,0.05)}
+.dark .stat-box{background:var(--card-dark);box-shadow:0 3px 14px rgba(0,0,0,0.3)}
+.stat-number{font-family:'Philosopher',serif;font-size:2rem;color:var(--red);font-weight:700}
+.dark .stat-number{color:var(--gold)}
+.stat-label{font-size:0.8rem;color:#777;font-weight:500}
+.dark .stat-label{color:var(--muted-dark)}
+
+/* ======== MAP ======== */
+.map-wrapper{background:#e8e8e8;border-radius:20px;padding:20px;position:relative;overflow:hidden;box-shadow:0 16px 50px rgba(0,0,0,0.1)}
+.dark .map-wrapper{background:#1a2235;box-shadow:0 16px 50px rgba(0,0,0,0.4)}
+.map-img-container{position:relative;max-width:750px;margin:0 auto;line-height:0}
+.map-img-container img{width:100%;height:auto;border-radius:12px;display:block}
+.hotspot{position:absolute;width:22px;height:22px;border-radius:50%;transform:translate(-50%,-50%);cursor:pointer;background:rgba(218,37,29,0.0);border:2px solid transparent;transition:all .25s ease;z-index:10}
+.hotspot:hover{background:rgba(218,37,29,0.25);border-color:var(--red);box-shadow:0 0 12px rgba(218,37,29,0.4);transform:translate(-50%,-50%) scale(1.3)}
+.hotspot.island-hs{width:28px;height:28px;border:2px dashed rgba(218,37,29,0.5);animation:islandPulse 2.5s ease-in-out infinite}
+.hotspot.island-hs:hover{border-color:var(--red);border-style:solid;animation:none}
+@keyframes islandPulse{0%,100%{border-color:rgba(218,37,29,0.5);transform:translate(-50%,-50%) scale(1)}50%{border-color:rgba(218,37,29,0.9);transform:translate(-50%,-50%) scale(1.15)}}
+.map-tooltip{position:absolute;background:rgba(0,0,0,0.9);color:#fff;padding:8px 14px;border-radius:8px;font-size:12px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:50;white-space:nowrap;max-width:280px;transform:translate(-50%,-100%);margin-top:-10px}
+.map-tooltip::after{content:'';position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:6px solid rgba(0,0,0,0.9)}
+.map-tooltip .tt-merged{font-size:10px;color:rgba(255,205,0,0.9);display:block;margin-top:2px}
+.map-tooltip .tt-kept{font-size:10px;color:rgba(130,255,130,0.8);display:block;margin-top:2px}
+.map-legend-bar{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;justify-content:center;font-size:11px;font-weight:500;color:#555}
+.dark .map-legend-bar{color:var(--muted-dark)}
+.map-legend-bar span{display:flex;align-items:center;gap:5px}
+.ml-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+/* Province panel */
+.prov-panel{position:fixed;top:0;right:-420px;width:400px;max-width:92vw;height:100vh;background:#fff;z-index:201;box-shadow:-8px 0 40px rgba(0,0,0,0.15);transition:right .35s cubic-bezier(.4,0,.2,1);overflow-y:auto;padding:0}
+.dark .prov-panel{background:var(--card-dark);box-shadow:-8px 0 40px rgba(0,0,0,0.5)}
+.prov-panel.open{right:0}
+.prov-panel-header{background:linear-gradient(135deg,var(--red),var(--dark-red));padding:28px 24px 22px;color:#fff;position:sticky;top:0;z-index:2}
+.prov-panel-header h3{font-family:'Philosopher',serif;font-size:1.3rem;margin-bottom:4px}
+.prov-panel-header .pp-sub{font-size:0.82rem;opacity:0.8}
+.prov-panel-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.15);border:none;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.prov-panel-close:hover{background:rgba(255,255,255,0.3)}
+.prov-panel-body{padding:20px 24px 30px}
+.prov-panel-body p{font-size:0.9rem;color:#444;margin-bottom:10px;line-height:1.8}
+.dark .prov-panel-body p{color:var(--muted-dark)}
+.pp-tag{display:inline-block;background:rgba(218,37,29,0.1);color:var(--red);padding:3px 10px;border-radius:16px;font-size:0.75rem;font-weight:600;margin:2px}
+.dark .pp-tag{background:rgba(255,205,0,0.12);color:var(--gold)}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:200;display:none}
+.overlay.show{display:block}
+
+/* ======== CARDS ======== */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.card{background:#fff;border-radius:16px;padding:26px 22px;box-shadow:0 3px 18px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.04);transition:all .25s;overflow:hidden}
+.dark .card{background:var(--card-dark);border-color:rgba(255,255,255,0.04);box-shadow:0 3px 18px rgba(0,0,0,0.25)}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(0,0,0,0.1)}
+.card-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px;color:#fff}
+.card h3{font-size:1.05rem;margin-bottom:8px;color:var(--navy)}
+.dark .card h3{color:#fff}
+.card p,.card li{font-size:0.88rem;color:#555;line-height:1.8}
+.dark .card p,.dark .card li{color:var(--muted-dark)}
+.card ul{padding-left:16px}
+.card ul li{margin-bottom:5px}
+
+/* ======== VIOLATION ======== */
+.violation-box{background:linear-gradient(135deg,#fff5f5,#fff);border-left:5px solid var(--red);border-radius:0 16px 16px 0;padding:28px 24px;margin-top:26px;box-shadow:0 3px 18px rgba(218,37,29,0.06)}
+.dark .violation-box{background:linear-gradient(135deg,#2a1212,var(--card-dark));box-shadow:0 3px 18px rgba(0,0,0,0.3)}
+.violation-box h3{color:var(--red);font-size:1.1rem;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.law-ref{display:inline-block;background:var(--red);color:#fff;padding:2px 10px;border-radius:18px;font-size:0.75rem;font-weight:600;margin:3px 3px 3px 0}
+.violation-box p,.violation-box li{font-size:0.88rem;color:#444;line-height:1.8}
+.dark .violation-box p,.dark .violation-box li{color:var(--muted-dark)}
+
+/* ======== INFO BOX ======== */
+.info-highlight{display:flex;align-items:flex-start;gap:14px;background:linear-gradient(135deg,#fffdf0,#fff8e1);border-radius:14px;padding:18px;margin-bottom:18px;border:1px solid rgba(255,205,0,0.25)}
+.dark .info-highlight{background:linear-gradient(135deg,#1a180c,var(--card-dark2));border-color:rgba(255,205,0,0.12)}
+.info-highlight i{color:var(--gold);font-size:1.3rem;margin-top:2px;flex-shrink:0}
+.info-highlight p{font-size:0.9rem}
+
+/* ======== TIMELINE ======== */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--red),var(--gold));border-radius:2px}
+.timeline-item{position:relative;margin-bottom:24px;padding-left:18px}
+.timeline-item::before{content:'';position:absolute;left:-24px;top:5px;width:13px;height:13px;background:var(--red);border:3px solid var(--gold);border-radius:50%}
+.timeline-item h4{font-size:0.95rem;color:var(--navy);margin-bottom:3px}
+.dark .timeline-item h4{color:var(--gold)}
+.timeline-item p{font-size:0.85rem;color:#555}
+.dark .timeline-item p{color:var(--muted-dark)}
+
+/* ======== TABS ======== */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tab-btn{padding:9px 18px;border:2px solid var(--red);background:transparent;color:var(--red);border-radius:28px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;font-weight:600;font-size:13px;transition:all .25s}
+.dark .tab-btn{border-color:var(--gold);color:var(--gold)}
+.tab-btn.active,.tab-btn:hover{background:var(--red);color:#fff}
+.dark .tab-btn.active,.dark .tab-btn:hover{background:var(--gold);color:var(--bg-dark)}
+.tab-content{display:none}.tab-content.active{display:block;animation:fadeIn .4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ======== MERGE TABLE ======== */
+.merge-table{width:100%;border-collapse:separate;border-spacing:0;margin:20px 0;border-radius:12px;overflow:hidden;font-size:0.85rem}
+.merge-table thead th{background:var(--red);color:#fff;padding:10px 12px;text-align:left;font-weight:600;font-size:0.8rem}
+.dark .merge-table thead th{background:var(--gold);color:var(--bg-dark)}
+.merge-table tbody td{padding:9px 12px;border-bottom:1px solid rgba(0,0,0,0.06)}
+.dark .merge-table tbody td{border-bottom-color:rgba(255,255,255,0.06)}
+.merge-table tbody tr:hover{background:rgba(218,37,29,0.04)}
+.dark .merge-table tbody tr:hover{background:rgba(255,205,0,0.04)}
+.city-badge{display:inline-block;background:var(--gold);color:var(--dark-red);padding:1px 8px;border-radius:10px;font-size:0.7rem;font-weight:700}
+
+/* ======== MESSAGE BANNER ======== */
+.message-banner{background:linear-gradient(135deg,var(--red) 0%,var(--dark-red) 100%);padding:56px 20px;text-align:center;position:relative;overflow:hidden}
+.message-banner::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5l5.59 11.33L48 18.18l-9 8.77L41.18 40 30 33.82 18.82 40 21 26.95l-9-8.77 12.41-1.85z' fill='rgba(255,205,0,0.04)'/%3E%3C/svg%3E");pointer-events:none}
+.message-banner h2{font-family:'Philosopher',serif;color:var(--gold);font-size:clamp(1.3rem,4vw,2rem);margin-bottom:20px;position:relative}
+.messages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;max-width:1000px;margin:0 auto;position:relative}
+.msg-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,205,0,0.18);border-radius:14px;padding:22px 18px;color:#fff;transition:all .25s}
+.msg-card:hover{background:rgba(255,255,255,0.16);transform:translateY(-2px)}
+.msg-card .msg-icon{font-size:1.8rem;margin-bottom:10px}
+.msg-card p{font-size:0.9rem;line-height:1.7}
+
+/* ======== FOOTER ======== */
+.footer{text-align:center;padding:28px 20px;background:var(--navy);color:rgba(255,255,255,0.65);font-size:0.82rem}
+.footer .flag-line{display:flex;justify-content:center;gap:5px;margin-bottom:10px}
+.footer .flag-stripe{width:36px;height:4px;border-radius:2px}
+
+/* ======== QUIZ SECTION ======== */
+.quiz-section{background:linear-gradient(175deg,#050D1A 0%,var(--ocean-deep) 30%,var(--ocean-mid) 65%,#0A2A4A 100%);padding:60px 20px;position:relative;overflow:hidden}
+.quiz-section::before{content:'';position:absolute;bottom:-30%;left:-10%;width:120%;height:80%;background:radial-gradient(ellipse at 30% 80%,rgba(21,101,192,0.12) 0%,transparent 60%);animation:oceanSway 12s ease-in-out infinite;pointer-events:none}
+@keyframes oceanSway{0%,100%{transform:translateX(0) rotate(0deg)}50%{transform:translateX(15px) rotate(.5deg)}}
+.quiz-section .particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.particle{position:absolute;border-radius:50%;opacity:0;animation:floatUp linear infinite}
+@keyframes floatUp{0%{opacity:0;transform:translateY(100%) scale(0)}10%{opacity:1}90%{opacity:.6}100%{opacity:0;transform:translateY(-100px) scale(1)}}
+.quiz-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
+
+/* Quiz screens */
+.qscreen{display:none;animation:qScreenIn .6s cubic-bezier(.16,1,.3,1)}
+.qscreen.active{display:block}
+@keyframes qScreenIn{from{opacity:0;transform:translateY(30px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+/* Start card */
+.start-card{text-align:center;padding:50px 30px 40px;background:linear-gradient(160deg,rgba(15,40,71,0.9),rgba(10,22,40,0.95));border:1px solid var(--glass-border);border-radius:28px;backdrop-filter:blur(20px);box-shadow:0 30px 80px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.06)}
+.start-emblem{width:90px;height:90px;margin:0 auto 20px;background:linear-gradient(135deg,var(--star-red),#B71C1C);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(229,57,53,0.3);animation:emblemPulse 3s ease-in-out infinite}
+@keyframes emblemPulse{0%,100%{box-shadow:0 0 40px rgba(229,57,53,0.3)}50%{box-shadow:0 0 50px rgba(229,57,53,0.5)}}
+.start-emblem svg{width:48px;height:48px}
+.quiz-title-text{font-family:'Philosopher',serif;font-size:clamp(1.4rem,4.5vw,2.2rem);font-weight:700;color:var(--gold);text-shadow:0 2px 20px rgba(255,213,79,0.2);margin-bottom:8px;line-height:1.3}
+.start-subtitle2{color:var(--muted-dark);font-size:0.92rem;margin-bottom:28px;line-height:1.6}
+.start-subtitle2 strong{color:var(--jade-light)}
+.difficulty-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.diff-btn{background:var(--glass);border:2px solid var(--glass-border);border-radius:16px;padding:16px 10px;cursor:pointer;transition:all .3s;color:var(--text-dark);font-family:'Be Vietnam Pro',sans-serif}
+.diff-btn:hover{border-color:var(--gold-dim);background:rgba(255,213,79,0.06)}
+.diff-btn.selected{border-color:var(--gold);background:rgba(255,213,79,0.1);box-shadow:0 0 20px rgba(255,213,79,0.15)}
+.diff-btn .diff-icon{font-size:1.5rem;margin-bottom:4px}
+.diff-btn .diff-label{font-weight:700;font-size:0.83rem;display:block}
+.diff-btn .diff-desc{font-size:0.68rem;color:var(--muted-dark);margin-top:2px;display:block}
+.start-btn{background:linear-gradient(135deg,var(--gold-bright),var(--gold-dim));color:var(--ocean-deep);border:none;padding:14px 44px;border-radius:50px;font-family:'Be Vietnam Pro',sans-serif;font-size:1rem;font-weight:800;cursor:pointer;box-shadow:0 8px 30px rgba(255,202,40,0.3);transition:all .3s;letter-spacing:1px;display:inline-flex;align-items:center;gap:10px}
+.start-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(255,202,40,0.4)}
+.start-stats{display:flex;justify-content:center;gap:28px;margin-top:24px;padding-top:20px;border-top:1px solid var(--glass-border)}
+.start-stat{text-align:center}
+.start-stat .ss-num{font-family:'Philosopher',serif;font-size:1.4rem;font-weight:700;color:var(--gold)}
+.start-stat .ss-label{font-size:0.7rem;color:var(--muted-dark)}
+
+/* Quiz HUD */
+.quiz-hud{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;margin-bottom:20px;background:rgba(15,40,71,0.7);backdrop-filter:blur(12px);border:1px solid var(--glass-border);border-radius:20px}
+.hud-item{text-align:center}
+.hud-label{font-size:.65rem;color:var(--muted-dark);text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+.hud-value{font-family:'Philosopher',serif;font-size:1.3rem;font-weight:700;color:var(--gold)}
+.hud-value.score-val{color:var(--jade-light)}
+.timer-ring-wrap{position:relative;width:52px;height:52px}
+.timer-ring{transform:rotate(-90deg)}
+.timer-ring-bg{fill:none;stroke:rgba(255,255,255,0.08);stroke-width:4}
+.timer-ring-fg{fill:none;stroke:var(--gold);stroke-width:4;stroke-linecap:round;transition:stroke-dashoffset 1s linear,stroke .3s}
+.timer-ring-fg.danger{stroke:var(--coral)}
+.timer-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.95rem;color:var(--text-dark)}
+.timer-text.danger{color:var(--coral)}
+.progress-wrap{height:5px;background:rgba(255,255,255,0.06);border-radius:3px;margin-bottom:20px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--jade),var(--gold));border-radius:3px;transition:width .5s cubic-bezier(.16,1,.3,1)}
+
+/* Question card */
+.question-card{background:linear-gradient(160deg,rgba(15,40,71,0.92),rgba(10,22,40,0.96));border:1px solid var(--glass-border);border-radius:24px;padding:34px 28px 28px;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.4)}
+.question-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--star-red),var(--gold),var(--jade))}
+.q-category{display:inline-flex;align-items:center;gap:6px;background:rgba(255,213,79,0.1);border:1px solid rgba(255,213,79,0.2);padding:5px 14px;border-radius:20px;font-size:.75rem;font-weight:600;color:var(--gold);margin-bottom:16px}
+.q-text{font-family:'Lora',serif;font-size:clamp(1rem,3vw,1.2rem);line-height:1.8;color:#fff;margin-bottom:26px;font-weight:500}
+.options-list{display:flex;flex-direction:column;gap:12px}
+.option-btn{display:flex;align-items:center;gap:14px;background:var(--glass);border:2px solid rgba(255,255,255,0.08);border-radius:16px;padding:16px 18px;cursor:pointer;transition:all .25s;font-family:'Be Vietnam Pro',sans-serif;font-size:.92rem;color:var(--text-dark);text-align:left;position:relative;overflow:hidden}
+.option-btn:hover:not(.disabled){border-color:var(--wave-1);background:rgba(21,101,192,0.12)}
+.opt-letter{width:36px;height:36px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);transition:all .3s}
+.option-btn:hover:not(.disabled) .opt-letter{background:var(--wave-1);border-color:var(--wave-1);color:#fff}
+.option-btn.correct{border-color:var(--jade);background:rgba(38,166,154,0.15);animation:correctPop .4s cubic-bezier(.16,1,.3,1)}
+.option-btn.correct .opt-letter{background:var(--jade);border-color:var(--jade);color:#fff}
+@keyframes correctPop{0%{transform:scale(1)}40%{transform:scale(1.02)}100%{transform:scale(1)}}
+.option-btn.wrong{border-color:var(--coral);background:rgba(255,107,107,0.12);animation:wrongShake .5s}
+.option-btn.wrong .opt-letter{background:var(--coral);border-color:var(--coral);color:#fff}
+@keyframes wrongShake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.option-btn.disabled{pointer-events:none;opacity:.5}
+.option-btn.correct.disabled{opacity:1}
+.option-btn.wrong.disabled{opacity:.85}
+.explanation{margin-top:20px;padding:18px 20px;border-radius:16px;background:rgba(38,166,154,0.08);border:1px solid rgba(38,166,154,0.2);animation:fadeSlideUp .4s ease}
+.explanation.wrong-exp{background:rgba(255,107,107,0.08);border-color:rgba(255,107,107,0.2)}
+.explanation h4{font-size:.85rem;margin-bottom:6px;display:flex;align-items:center;gap:6px;color:var(--text-dark)}
+.explanation p{font-size:.85rem;color:var(--muted-dark);line-height:1.7}
+@keyframes fadeSlideUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.next-btn{display:block;width:100%;margin-top:18px;background:linear-gradient(135deg,var(--wave-1),var(--ocean-light));border:none;padding:15px;border-radius:14px;color:#fff;font-family:'Be Vietnam Pro',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:all .3s}
+.next-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(21,101,192,0.3)}
+.streak-popup{position:fixed;top:20%;left:50%;transform:translateX(-50%);z-index:100;padding:12px 28px;border-radius:50px;font-weight:800;font-size:1.1rem;pointer-events:none;animation:streakAnim 1.5s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes streakAnim{0%{opacity:0;transform:translateX(-50%) translateY(20px) scale(.8)}20%{opacity:1;transform:translateX(-50%) translateY(0) scale(1.1)}40%{transform:translateX(-50%) translateY(0) scale(1)}100%{opacity:0;transform:translateX(-50%) translateY(-40px) scale(.9)}}
+
+/* Result card */
+.result-card{text-align:center;padding:40px 28px;background:linear-gradient(160deg,rgba(15,40,71,0.92),rgba(10,22,40,0.96));border:1px solid var(--glass-border);border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,0.5)}
+.result-circle-wrap{position:relative;width:160px;height:160px;margin:0 auto 24px}
+.result-ring{transform:rotate(-90deg);width:160px;height:160px}
+.result-ring-bg{fill:none;stroke:rgba(255,255,255,0.06);stroke-width:8}
+.result-ring-fg{fill:none;stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset 1.5s cubic-bezier(.16,1,.3,1)}
+.result-score-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.result-score-num{font-family:'Philosopher',serif;font-size:2.4rem;font-weight:700}
+.result-score-label{font-size:.75rem;color:var(--muted-dark)}
+.result-title{font-family:'Philosopher',serif;font-size:1.6rem;color:var(--gold);margin-bottom:6px}
+.result-desc{color:var(--muted-dark);font-size:.9rem;margin-bottom:28px;line-height:1.6}
+.result-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px}
+.r-stat{background:var(--glass);border:1px solid var(--glass-border);border-radius:16px;padding:16px 10px}
+.r-stat-icon{font-size:1.3rem;margin-bottom:4px}
+.r-stat-val{font-family:'Philosopher',serif;font-size:1.4rem;font-weight:700}
+.r-stat-lab{font-size:.7rem;color:var(--muted-dark)}
+.result-review{text-align:left;margin-bottom:24px}
+.result-review h3{font-size:.9rem;color:var(--gold);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.review-item{padding:14px 16px;border-radius:12px;margin-bottom:8px;background:var(--glass);border:1px solid var(--glass-border);font-size:.82rem;display:flex;align-items:flex-start;gap:10px}
+.review-item.ri-correct{border-left:3px solid var(--jade)}
+.review-item.ri-wrong{border-left:3px solid var(--coral)}
+.review-item .ri-icon{font-size:.9rem;flex-shrink:0;margin-top:2px}
+.review-item .ri-q{color:var(--muted-dark);line-height:1.5}
+.review-item .ri-q strong{color:var(--text-dark)}
+.review-item .ri-ans{color:var(--jade-light);font-weight:600;margin-top:3px}
+.review-item.ri-wrong .ri-ans{color:var(--coral)}
+.result-btns{display:flex;gap:12px}
+.result-btns button{flex:1;padding:14px;border-radius:14px;border:none;font-family:'Be Vietnam Pro',sans-serif;font-weight:700;font-size:.9rem;cursor:pointer;transition:all .3s}
+.btn-retry{background:linear-gradient(135deg,var(--gold-bright),var(--gold-dim));color:var(--ocean-deep)}
+.btn-retry:hover{box-shadow:0 6px 20px rgba(255,202,40,0.3);transform:translateY(-1px)}
+.btn-home{background:var(--glass);border:2px solid var(--glass-border) !important;color:var(--text-dark)}
+.btn-home:hover{border-color:var(--gold) !important;background:rgba(255,213,79,0.06)}
+
+/* ======== REVEAL ======== */
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ======== RESPONSIVE ======== */
+@media(max-width:600px){
+  .section{padding:36px 14px}
+  .card-grid{grid-template-columns:1fr}
+  .nav-bar{justify-content:flex-start}
+  .nav-bar a{padding:11px 12px;font-size:12px}
+  .map-wrapper{padding:12px;border-radius:14px}
+  .hotspot{width:16px;height:16px}
+  .hotspot.island-hs{width:20px;height:20px}
+  .quiz-section{padding:40px 12px}
+  .start-card,.question-card,.result-card{padding:28px 18px;border-radius:20px}
+  .difficulty-grid{gap:8px}
+  .diff-btn{padding:14px 6px}
+  .quiz-hud{padding:10px 14px}
+  .result-stats{gap:8px}
+  .r-stat{padding:12px 6px}
+  .result-btns{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <svg class="hero-star" viewBox="0 0 100 100" width="72" height="72"><polygon points="50,5 61,35 95,35 68,55 79,90 50,68 21,90 32,55 5,35 39,35" fill="#FFCD00"/></svg>
+  <h1>CHỦ QUYỀN BIỂN ĐẢO<br>& BIÊN GIỚI VIỆT NAM</h1>
+  <p class="subtitle">Bản đồ hành chính mới với 34 tỉnh thành — Hoàng Sa, Trường Sa là của Việt Nam</p>
+  <div class="badge"><i class="fas fa-calendar-check"></i>&nbsp; Cập nhật theo Nghị quyết 202/2025/QH15</div>
+  <a href="#map" class="scroll-hint"><i class="fas fa-chevron-down"></i></a>
+</section>
+
+<!-- NAV -->
+<nav class="nav-bar" id="navbar">
+  <a href="#map" class="active">Bản đồ</a>
+  <a href="#sovereignty">Chủ quyền</a>
+  <a href="#borders">Biên giới</a>
+  <a href="#rights">Quyền & NV</a>
+  <a href="#violations">Vi phạm</a>
+  <a href="#quiz" class="quiz-link"><i class="fas fa-gamepad"></i> Trắc nghiệm</a>
+  <a href="#messages">Thông điệp</a>
+</nav>
+
+<!-- MAP SECTION -->
+<section class="section" id="map">
+  <div class="reveal">
+    <h2 class="section-title">Bản Đồ Việt Nam 2026</h2>
+    <p class="section-desc">Bản đồ hành chính mới với <strong>34 tỉnh thành</strong> (28 tỉnh, 6 TP trực thuộc TW) có hiệu lực từ 01/07/2025.</p>
+  </div>
+  <div class="stats-row reveal">
+    <div class="stat-box"><div class="stat-number" data-target="34">0</div><div class="stat-label">Tỉnh thành</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="3260">0</div><div class="stat-label">km Bờ biển</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="4639">0</div><div class="stat-label">km Biên giới</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="3000">0</div><div class="stat-label">+ Đảo lớn nhỏ</div></div>
+  </div>
+  <div class="map-wrapper reveal">
+    <div class="map-img-container" id="mapContainer">
+      <img src="https://pfst.cf2.poecdn.net/base/image/946035c15ef4815966a90f8759594e974b88c64216fa9e63ff2568e050f90c23?w=927&h=1310" alt="Bản đồ Việt Nam 34 tỉnh thành 2026" id="mapImg">
+      <div class="map-tooltip" id="mapTooltip"></div>
+    </div>
+    <div class="map-legend-bar">
+      <span><span class="ml-dot" style="background:var(--red)"></span> Nhấn vào tỉnh</span>
+      <span><span class="ml-dot" style="border:2px dashed var(--red);background:transparent"></span> Quần đảo</span>
+      <span><span class="ml-dot" style="background:var(--gold)"></span> Sau sáp nhập</span>
+      <span><span class="ml-dot" style="background:#66BB6A"></span> Giữ nguyên</span>
+    </div>
+  </div>
+  <div class="reveal" style="margin-top:36px">
+    <h3 class="section-title" style="font-size:1.2rem">Bảng Sáp Nhập 34 Tỉnh Thành</h3>
+    <p class="section-desc" style="margin-bottom:16px">Theo Nghị quyết 202/2025/QH15</p>
+    <div style="overflow-x:auto">
+      <table class="merge-table">
+        <thead><tr><th>STT</th><th>Tỉnh/TP mới</th><th>Sáp nhập từ</th><th>Loại</th></tr></thead>
+        <tbody id="mergeTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SOVEREIGNTY -->
+<section class="section" id="sovereignty">
+  <div class="reveal">
+    <h2 class="section-title">Chủ Quyền Biển Đảo Việt Nam</h2>
+    <p class="section-desc">Việt Nam có chủ quyền không thể tranh cãi đối với hai quần đảo Hoàng Sa và Trường Sa.</p>
+  </div>
+  <div class="info-highlight reveal">
+    <i class="fas fa-landmark"></i>
+    <p><strong>Công ước LHQ về Luật Biển 1982 (UNCLOS):</strong> Việt Nam phê chuẩn năm 1994, khẳng định quyền chủ quyền đối với lãnh hải 12 hải lý, vùng đặc quyền kinh tế 200 hải lý và thềm lục địa.</p>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab(event,'hs-tab')">Hoàng Sa</button>
+    <button class="tab-btn" onclick="switchTab(event,'ts-tab')">Trường Sa</button>
+    <button class="tab-btn" onclick="switchTab(event,'hist-tab')">Lịch sử</button>
+  </div>
+  <div id="hs-tab" class="tab-content active reveal">
+    <div class="card" style="border-top:4px solid var(--red)">
+      <h3>Quần đảo Hoàng Sa (Paracel Islands)</h3>
+      <p>Nằm ở phía Bắc Biển Đông, cách Đà Nẵng khoảng <strong>170 hải lý</strong>, gồm hơn <strong>30 đảo, bãi đá, bãi cạn</strong>:</p>
+      <ul>
+        <li><strong>Nhóm Lưỡi Liềm:</strong> Hoàng Sa, Hữu Nhật, Duy Mộng, Quang Ảnh, Quang Hòa...</li>
+        <li><strong>Nhóm An Vĩnh:</strong> Phú Lâm, Cây, Lincoln, Đá Bắc, Đá Nam...</li>
+      </ul>
+      <p style="margin-top:10px">Việt Nam thực thi chủ quyền liên tục từ thế kỷ XVII. Năm 1974 Trung Quốc dùng vũ lực chiếm đóng trái phép.</p>
+    </div>
+  </div>
+  <div id="ts-tab" class="tab-content reveal">
+    <div class="card" style="border-top:4px solid var(--sea)">
+      <h3>Quần đảo Trường Sa (Spratly Islands)</h3>
+      <p>Gồm hơn <strong>100 đảo, đá, bãi ngầm</strong>, trải rộng <strong>160.000–180.000 km²</strong>. Huyện Trường Sa thuộc tỉnh <strong>Khánh Hòa</strong>.</p>
+      <ul>
+        <li><strong>Đảo Trường Sa Lớn:</strong> Trung tâm hành chính huyện Trường Sa</li>
+        <li><strong>Các đảo VN quản lý:</strong> Song Tử Tây, Sinh Tồn, Nam Yết, Sơn Ca...</li>
+      </ul>
+      <p style="margin-top:10px">Việt Nam đang quản lý <strong>21 đảo và thực thể</strong>, duy trì lực lượng và phát triển hạ tầng.</p>
+    </div>
+  </div>
+  <div id="hist-tab" class="tab-content reveal">
+    <div class="timeline">
+      <div class="timeline-item"><h4>Thế kỷ XVII — Đội Hoàng Sa</h4><p>Chúa Nguyễn lập đội Hoàng Sa & Bắc Hải khai thác và cắm mốc chủ quyền.</p></div>
+      <div class="timeline-item"><h4>1816 — Vua Gia Long</h4><p>Chính thức cắm cờ và tuyên bố chủ quyền tại Hoàng Sa.</p></div>
+      <div class="timeline-item"><h4>1835 — Vua Minh Mạng</h4><p>Xây miếu, dựng bia, trồng cây và đo đạc thủy trình tại Hoàng Sa.</p></div>
+      <div class="timeline-item"><h4>1977 — Tuyên bố vùng biển</h4><p>Tuyên bố lãnh hải, tiếp giáp, đặc quyền kinh tế và thềm lục địa.</p></div>
+      <div class="timeline-item"><h4>1994 — Phê chuẩn UNCLOS</h4><p>Quốc hội phê chuẩn Công ước LHQ về Luật Biển 1982.</p></div>
+      <div class="timeline-item"><h4>2012 — Luật Biển Việt Nam</h4><p>Khẳng định chủ quyền Hoàng Sa & Trường Sa trong luật.</p></div>
+      <div class="timeline-item"><h4>2025 — Sáp nhập hành chính</h4><p>NQ 202/2025/QH15 sắp xếp 63 tỉnh thành còn 34.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BORDERS -->
+<section class="section" id="borders">
+  <div class="reveal">
+    <h2 class="section-title">Tuyến Biên Giới Quốc Gia</h2>
+    <p class="section-desc">Biên giới đất liền dài 4.639 km tiếp giáp 3 quốc gia, bờ biển dài 3.260 km.</p>
+  </div>
+  <div class="card-grid reveal">
+    <div class="card">
+      <div class="card-icon" style="background:linear-gradient(135deg,#FF3D00,#BF360C)"><i class="fas fa-mountain"></i></div>
+      <h3>Việt Nam — Trung Quốc</h3>
+      <ul><li><strong>Chiều dài:</strong> ~1.449 km</li><li><strong>Hiệp ước:</strong> Biên giới đất liền (1999), cắm mốc (2008)</li><li><strong>Cửa khẩu:</strong> Hữu Nghị, Móng Cái, Lào Cai...</li></ul>
+    </div>
+    <div class="card">
+      <div class="card-icon" style="background:linear-gradient(135deg,#FF9100,#E65100)"><i class="fas fa-tree"></i></div>
+      <h3>Việt Nam — Lào</h3>
+      <ul><li><strong>Chiều dài:</strong> ~2.340 km (dài nhất)</li><li><strong>Hiệp ước:</strong> Hoạch định (1977), bổ sung (1986)</li></ul>
+    </div>
+    <div class="card">
+      <div class="card-icon" style="background:linear-gradient(135deg,#FFD600,#F9A825)"><i class="fas fa-gopuram"></i></div>
+      <h3>Việt Nam — Campuchia</h3>
+      <ul><li><strong>Chiều dài:</strong> ~1.245 km</li><li><strong>Hiệp ước:</strong> Hoạch định (1985), bổ sung (2005)</li></ul>
+    </div>
+  </div>
+  <div class="info-highlight reveal" style="margin-top:24px">
+    <i class="fas fa-ship"></i>
+    <p><strong>Biên giới biển:</strong> Hiệp định phân định Vịnh Bắc Bộ với Trung Quốc (2000), thềm lục địa với Indonesia (2003).</p>
+  </div>
+</section>
+
+<!-- RIGHTS -->
+<section class="section" id="rights">
+  <div class="reveal">
+    <h2 class="section-title">Quyền và Nghĩa Vụ Công Dân</h2>
+    <p class="section-desc">Theo Hiến pháp 2013, mọi công dân có quyền và nghĩa vụ thiêng liêng trong bảo vệ Tổ quốc.</p>
+  </div>
+  <div class="card-grid reveal">
+    <div class="card">
+      <div class="card-icon" style="background:linear-gradient(135deg,var(--sea),#005f99)"><i class="fas fa-balance-scale"></i></div>
+      <h3>Quyền Công Dân</h3>
+      <ul><li><strong>Điều 44 — HP 2013:</strong> Trung thành với Tổ quốc</li><li>Được Nhà nước bảo đảm an ninh, quốc phòng</li><li>Tham gia xây dựng nền quốc phòng toàn dân</li><li>Tố cáo hành vi xâm phạm chủ quyền</li></ul>
+    </div>
+    <div class="card">
+      <div class="card-icon" style="background:linear-gradient(135deg,var(--red),var(--dark-red))"><i class="fas fa-shield-alt"></i></div>
+      <h3>Nghĩa Vụ Công Dân</h3>
+      <ul><li><strong>Điều 45 — HP 2013:</strong> Bảo vệ Tổ quốc là nghĩa vụ thiêng liêng</li><li>Nghĩa vụ quân sự (Luật NVQS 2015)</li><li>Bảo vệ biên giới (Luật BGQG 2003)</li><li>Sẵn sàng lực lượng dự bị, dân quân tự vệ</li></ul>
+    </div>
+    <div class="card">
+      <div class="card-icon" style="background:linear-gradient(135deg,var(--gold),#e6b800)"><i class="fas fa-gavel"></i></div>
+      <h3>Cơ Sở Pháp Lý</h3>
+      <ul><li><strong>Hiến pháp 2013 — Đ.1</strong></li><li><strong>Luật Biển 2012</strong></li><li><strong>Luật BGQG 2003</strong></li><li><strong>BLHS 2015</strong></li><li><strong>Luật Quốc phòng 2018</strong></li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- VIOLATIONS -->
+<section class="section" id="violations">
+  <div class="reveal">
+    <h2 class="section-title">Phân Tích Hành Vi Vi Phạm</h2>
+    <p class="section-desc">Hành vi vi phạm pháp luật về chủ quyền lãnh thổ và hậu quả pháp lý.</p>
+  </div>
+  <div class="violation-box reveal">
+    <h3><i class="fas fa-exclamation-triangle"></i> Vi phạm 1: Xâm phạm chủ quyền lãnh thổ</h3>
+    <p><strong>Hành vi:</strong> Xâm nhập trái phép vùng biển, vùng trời; đánh bắt cá trái phép; xây dựng công trình trái phép.</p>
+    <div style="margin:10px 0"><span class="law-ref">Điều 110 — BLHS 2015</span><span class="law-ref">Luật Biển 2012</span><span class="law-ref">UNCLOS 1982</span></div>
+    <ul><li><strong>Hình sự (Đ.110):</strong> Tù 1–5 năm; nghiêm trọng 5–10 năm; đặc biệt 10–15 năm/chung thân.</li><li><strong>Hành chính:</strong> Phạt tiền, tịch thu phương tiện, trục xuất.</li><li><strong>Quốc tế:</strong> Kiện ra ITLOS hoặc PCA theo UNCLOS.</li></ul>
+  </div>
+  <div class="violation-box reveal" style="border-left-color:#FF9100;margin-top:22px">
+    <h3><i class="fas fa-ban" style="color:#FF9100"></i> Vi phạm 2: Phản bội Tổ quốc & Gián điệp</h3>
+    <p><strong>Hành vi:</strong> Câu kết nước ngoài gây hại an ninh; cung cấp bí mật quốc phòng.</p>
+    <div style="margin:10px 0"><span class="law-ref" style="background:#FF9100">Điều 108 — BLHS</span><span class="law-ref" style="background:#FF9100">Điều 109 — BLHS</span></div>
+    <ul><li><strong>Đ.108 (Phản bội TQ):</strong> Tù 12–20 năm, chung thân hoặc tử hình.</li><li><strong>Đ.109 (Lật đổ CQ):</strong> Tù 5–20 năm/chung thân.</li></ul>
+  </div>
+  <div class="violation-box reveal" style="border-left-color:var(--sea);margin-top:22px">
+    <h3><i class="fas fa-fish" style="color:var(--sea)"></i> Vi phạm 3: Vi phạm vùng biển & biên giới</h3>
+    <p><strong>Hành vi:</strong> Đánh bắt trái phép trong vùng đặc quyền kinh tế; khai thác tài nguyên trái phép.</p>
+    <div style="margin:10px 0"><span class="law-ref" style="background:var(--sea)">Luật Biển 2012</span><span class="law-ref" style="background:var(--sea)">NĐ 162/2013</span></div>
+    <ul><li><strong>Phạt tiền:</strong> 500 triệu–1 tỷ VNĐ với tàu nước ngoài.</li><li><strong>Tịch thu:</strong> Tàu thuyền, ngư cụ, hải sản trái phép.</li></ul>
+  </div>
+</section>
+
+<!-- ======== QUIZ SECTION ======== -->
+<section class="quiz-section" id="quiz">
+  <div class="particles" id="particles"></div>
+  <div class="quiz-inner">
+
+    <!-- START -->
+    <div class="qscreen active" id="qStartScreen">
+      <div class="start-card">
+        <div class="start-emblem">
+          <svg viewBox="0 0 100 100"><polygon points="50,8 61,38 94,38 67,56 78,88 50,70 22,88 33,56 6,38 39,38" fill="#FFD54F"/></svg>
+        </div>
+        <h2 class="quiz-title-text">Trắc Nghiệm<br>Chủ Quyền Biển Đảo</h2>
+        <p class="start-subtitle2">Kiểm tra kiến thức về <strong>biển đảo Việt Nam</strong>, Hoàng Sa &amp; Trường Sa, biên giới và pháp luật chủ quyền.</p>
+        <div class="difficulty-grid">
+          <div class="diff-btn selected" data-diff="easy" onclick="selectDiff(this)">
+            <div class="diff-icon">🌊</div><span class="diff-label">Dễ</span><span class="diff-desc">15 giây/câu</span>
+          </div>
+          <div class="diff-btn" data-diff="medium" onclick="selectDiff(this)">
+            <div class="diff-icon">⚓</div><span class="diff-label">Trung Bình</span><span class="diff-desc">12 giây/câu</span>
+          </div>
+          <div class="diff-btn" data-diff="hard" onclick="selectDiff(this)">
+            <div class="diff-icon">🛡️</div><span class="diff-label">Khó</span><span class="diff-desc">8 giây/câu</span>
+          </div>
+        </div>
+        <button class="start-btn" onclick="startGame()"><i class="fas fa-anchor"></i> BẮT ĐẦU</button>
+        <div class="start-stats">
+          <div class="start-stat"><div class="ss-num" id="totalQCount">15</div><div class="ss-label">Câu hỏi</div></div>
+          <div class="start-stat"><div class="ss-num">5</div><div class="ss-label">Chủ đề</div></div>
+          <div class="start-stat"><div class="ss-num" id="bestScoreDisplay">0</div><div class="ss-label">Điểm cao nhất</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUIZ PLAY -->
+    <div class="qscreen" id="qPlayScreen">
+      <div class="quiz-hud">
+        <div class="hud-item"><div class="hud-label">Câu hỏi</div><div class="hud-value" id="hudQuestion">1/15</div></div>
+        <div class="hud-item">
+          <div class="timer-ring-wrap">
+            <svg class="timer-ring" viewBox="0 0 60 60">
+              <circle class="timer-ring-bg" cx="30" cy="30" r="26"/>
+              <circle class="timer-ring-fg" id="timerRing" cx="30" cy="30" r="26" stroke-dasharray="163.36" stroke-dashoffset="0"/>
+            </svg>
+            <div class="timer-text" id="timerText">15</div>
+          </div>
+        </div>
+        <div class="hud-item"><div class="hud-label">Điểm</div><div class="hud-value score-val" id="hudScore">0</div></div>
+      </div>
+      <div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="question-card" id="questionCard"></div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="qscreen" id="qResultScreen">
+      <div class="result-card" id="resultCard"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MESSAGES -->
+<section class="message-banner" id="messages">
+  <h2>Thông Điệp Tuyên Truyền</h2>
+  <div class="messages-grid">
+    <div class="msg-card"><div class="msg-icon">🇻🇳</div><p><strong>"Hoàng Sa, Trường Sa là của Việt Nam!"</strong><br>Chủ quyền biển đảo thiêng liêng, bất khả xâm phạm.</p></div>
+    <div class="msg-card"><div class="msg-icon">⚓</div><p><strong>"Biển đảo quê hương — Trách nhiệm mỗi người"</strong><br>Tìm hiểu, lan tỏa kiến thức về chủ quyền biển đảo.</p></div>
+    <div class="msg-card"><div class="msg-icon">🛡️</div><p><strong>"Bảo vệ Tổ quốc — Nghĩa vụ thiêng liêng"</strong><br>Điều 45 Hiến pháp 2013.</p></div>
+    <div class="msg-card"><div class="msg-icon">🌊</div><p><strong>"Vì biển đảo quê hương — Tuổi trẻ sẵn sàng"</strong><br>Rèn luyện, nâng cao ý thức bảo vệ chủ quyền.</p></div>
+    <div class="msg-card"><div class="msg-icon">⭐</div><p><strong>"34 tỉnh thành — Một Việt Nam thống nhất"</strong><br>Cải cách hành chính 2025 tinh gọn bộ máy.</p></div>
+    <div class="msg-card"><div class="msg-icon">📚</div><p><strong>"Hiểu biết pháp luật — Bảo vệ biên giới"</strong><br>Nắm vững Luật Biển 2012, Luật BGQG 2003.</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="flag-line">
+    <div class="flag-stripe" style="background:var(--red)"></div>
+    <div class="flag-stripe" style="background:var(--gold)"></div>
+    <div class="flag-stripe" style="background:var(--red)"></div>
+  </div>
+  <p>Ứng dụng giáo dục — Chủ quyền Biển đảo & Biên giới Việt Nam 2026</p>
+  <p style="margin-top:5px;opacity:.55">Nghị quyết 202/2025/QH15 · Vì Việt Nam hòa bình, thống nhất và toàn vẹn lãnh thổ</p>
+</footer>
+
+<!-- PROVINCE PANEL -->
+<div class="overlay" id="overlay" onclick="closePanel()"></div>
+<div class="prov-panel" id="provPanel">
+  <div class="prov-panel-header">
+    <button class="prov-panel-close" onclick="closePanel()">&times;</button>
+    <h3 id="panelTitle"></h3>
+    <div class="pp-sub" id="panelSub"></div>
+  </div>
+  <div class="prov-panel-body" id="panelBody"></div>
+</div>
+
+<script>
+/* ===== DARK MODE ===== */
+if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches)document.documentElement.classList.add('dark');
+window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',function(e){e.matches?document.documentElement.classList.add('dark'):document.documentElement.classList.remove('dark')});
+
+/* ===== PROVINCE DATA ===== */
+/* Province Data: [name, type, merged, from, desc, area, pop, x%, y%] */
+var P = [
+  ["Lai Châu","Tỉnh",false,"","Vùng cao Tây Bắc, giữ nguyên. Giáp biên giới Trung Quốc.","9.065 km²","~460.000",11.5,7.5],
+  ["Điện Biên","Tỉnh",false,"","Chiến thắng Điện Biên Phủ 1954. Giáp Trung Quốc và Lào. A Pa Chải, Điện Biên - Cực Tây của Tổ quốc.","9.541 km²","~598.000",10,11],
+  ["Sơn La","Tỉnh",false,"","Miền núi Tây Bắc. Thủy điện Sơn La lớn nhất Đông Nam Á.","14.175 km²","~1.250.000",18.5,15],
+  ["Lào Cai","Tỉnh",true,"Yên Bái + Lào Cai","Có đỉnh Fansipan — nóc nhà Đông Dương. Cửa khẩu quốc tế Lào Cai.","~13.200 km²","~1.500.000",21,10],
+  ["Tuyên Quang","Tỉnh",true,"Hà Giang + Tuyên Quang","Bao gồm Công viên địa chất toàn cầu Cao nguyên đá Đồng Văn. Cột cờ Lũng Cú, Hà Giang - Cực Bắc Tổ quốc.","~12.800 km²","~1.600.000",27,6.5],
+  ["Cao Bằng","Tỉnh",false,"","Biên giới phía Bắc. Nổi tiếng thác Bản Giốc.","6.700 km²","~530.000",36,5],
+  ["Thái Nguyên","Tỉnh",true,"Bắc Kạn + Thái Nguyên","Hồ Ba Bể — di sản thiên nhiên.","~8.400 km²","~1.600.000",34,8.5],
+  ["Lạng Sơn","Tỉnh",false,"","Cửa khẩu quốc tế Hữu Nghị, giáp Trung Quốc.","8.320 km²","~782.000",40,11],
+  ["Phú Thọ","Tỉnh",true,"Vĩnh Phúc + Hòa Bình + Phú Thọ","Đất Tổ Hùng Vương, Đền Hùng — biểu tượng nguồn cội.","~8.900 km²","~3.200.000",27.75,14.25],
+  ["Hà Nội","TP trực thuộc TW",false,"","Thủ đô Việt Nam. Trung tâm chính trị, văn hóa. Giữ nguyên.","3.359 km²","~8.500.000",32.75,16.75],
+  ["Bắc Ninh","Tỉnh",true,"Bắc Giang + Bắc Ninh","Trung tâm công nghiệp điện tử hàng đầu VN.","~4.600 km²","~3.200.000",39.25,14.5],
+  ["Quảng Ninh","Tỉnh",false,"","Vịnh Hạ Long — Di sản thiên nhiên thế giới. Giáp Trung Quốc.","6.178 km²","~1.320.000",45,15],
+  ["Hải Phòng","TP trực thuộc TW",true,"Hải Dương + Hải Phòng","Cảng biển lớn nhất miền Bắc. Mở rộng lên 3.195 km².","3.195 km²","~4.664.000",39,17],
+  ["Hưng Yên","Tỉnh",true,"Thái Bình + Hưng Yên","Vùng lúa gạo quan trọng đồng bằng sông Hồng.","~2.400 km²","~2.700.000",38,19],
+  ["Ninh Bình","Tỉnh",true,"Hà Nam + Nam Định + Ninh Bình","Tràng An — Di sản hỗn hợp thế giới. Bờ biển mở rộng 15→88 km.","3.943 km²","~4.412.000",35.25,20.5],
+  ["Thanh Hóa","Tỉnh",false,"","Lớn nhất miền Bắc. Thành nhà Hồ — Di sản Văn hoá thế giới.","11.120 km²","~3.640.000",29.75,22],
+  ["Nghệ An","Tỉnh",false,"","Quê Chủ tịch Hồ Chí Minh. Tỉnh rộng nhất Việt Nam.","16.494 km²","~3.330.000",26.25,27.25],
+  ["Hà Tĩnh","Tỉnh",false,"","Bắc Trung Bộ, giáp biên giới Lào. Giữ nguyên.","5.998 km²","~1.290.000",32.25,33.5],
+  ["Quảng Trị","Tỉnh",true,"Quảng Bình + Quảng Trị","Phong Nha-Kẻ Bàng — Di sản Thiên nhiên Thế giới. Vĩ tuyến 17 lịch sử.","~8.700 km²","~1.500.000",39.5,39.75],
+  ["Huế","TP trực thuộc TW",false,"","Cố đô triều Nguyễn — Di sản Văn hoá Thế giới. Thành phố trực thuộc Trung ương từ 2025.","5.065 km²","~1.130.000",47.5,45.75],
+  ["Đà Nẵng","TP trực thuộc TW",true,"Quảng Nam + Đà Nẵng","Phố cổ Hội An, Thánh địa Mỹ Sơn — 2 Di sản Thế giới.","~11.600 km²","~2.700.000",51.75,49.75],
+  ["Quảng Ngãi","Tỉnh",true,"Kon Tum + Quảng Ngãi","Kết hợp Tây Nguyên và duyên hải miền Trung.","~12.200 km²","~1.800.000",53.75,55.25],
+  ["Gia Lai","Tỉnh",true,"Bình Định + Gia Lai","Kết nối bờ biển Quy Nhơn lên cao nguyên Tây Nguyên.","~21.400 km²","~2.800.000",55.75,60.75],
+  ["Đắk Lắk","Tỉnh",true,"Phú Yên + Đắk Lắk","Thủ phủ cà phê Việt Nam. Văn hóa Cồng chiêng Tây Nguyên.","~18.200 km²","~2.800.000",55.75,67.75],
+  ["Khánh Hòa","Tỉnh",true,"Ninh Thuận + Khánh Hòa","Quản lý huyện đảo Trường Sa. Vịnh Nha Trang. Mũi Đôi, Khánh Hoà - Cực Đông Tổ quốc, nơi đón ánh bình minh đầu tiên.","~9.100 km²","~1.800.000",60,72],
+  ["Lâm Đồng","Tỉnh",true,"Đắk Nông + Bình Thuận + Lâm Đồng","Đà Lạt, Mũi Né, Tà Đùng. Từ cao nguyên đến biển.","~16.400 km²","~2.500.000",52.5,74],
+  ["Đồng Nai","Tỉnh",true,"Bình Phước + Đồng Nai","Vườn Quốc gia Cát Tiên — Khu dự trữ sinh quyển Thế giới.","~12.500 km²","~3.900.000",43.25,75.25],
+  ["Tây Ninh","Tỉnh",true,"Long An + Tây Ninh","Giáp Campuchia. Cửa khẩu Mộc Bài.","~8.700 km²","~3.200.000",36,76],
+  ["TP Hồ Chí Minh","TP trực thuộc TW",true,"Bà Rịa-Vũng Tàu + Bình Dương + TP.HCM","Siêu đô thị lớn nhất Việt Nam. Trung tâm kinh tế, tài chính.","~4.200 km²","~13.500.000",40,78],
+  ["Đồng Tháp","Tỉnh",true,"Tiền Giang + Đồng Tháp","Vùng lúa gạo, trái cây đồng bằng sông Cửu Long.","~5.900 km²","~3.500.000",35.5,82],
+  ["An Giang","Tỉnh",true,"Kiên Giang + An Giang","Bao gồm đảo Phú Quốc. Trung tâm tại Rạch Giá.","9.889 km²","~3.679.000",26.5,82.25],
+  ["Vĩnh Long","Tỉnh",true,"Bến Tre + Vĩnh Long + Trà Vinh","Mở rộng 130 km bờ biển, phát triển hướng biển.","6.296 km²","~4.258.000",36,85],
+  ["Cần Thơ","TP trực thuộc TW",true,"Sóc Trăng + Hậu Giang + Cần Thơ","Trung tâm kinh tế Đồng bằng sông Cửu Long. Chợ nổi Cái Răng.","~6.500 km²","~3.100.000",32.75,86],
+  ["Cà Mau","Tỉnh",true,"Bạc Liêu + Cà Mau","Mũi Cà Mau — điểm cực Nam Tổ quốc.","7.942 km²","~2.141.000",28.25,89.5],
+];
+
+/* Islands */
+var islands = [
+  {name:"Quần đảo Hoàng Sa (Paracel)",x:84,y:44,desc:'<p><strong>Vị trí:</strong> 15°45\'–17°15\' Bắc, 111°–113° Đông</p><p><strong>Biển:</strong> ~30.000 km² · Hơn 30 đảo</p><p><strong>Cách Đà Nẵng:</strong> ~170 hải lý</p><p style="color:var(--red);font-weight:600;margin-top:8px">Chủ quyền không thể tranh cãi của Việt Nam.</p>'},
+  {name:"Quần đảo Trường Sa (Spratly)",x:86,y:89.5,desc:'<p><strong>Vị trí:</strong> 6°12\'–12° Bắc, 111°30\'–117°20\' Đông</p><p><strong>Biển:</strong> 160.000–180.000 km² · 100+ đảo</p><p><strong>Quản lý:</strong> Huyện Trường Sa, tỉnh Khánh Hòa</p><p><strong>VN quản lý:</strong> 21 thực thể</p><p style="color:var(--red);font-weight:600;margin-top:8px">Việt Nam duy trì quân đội và hạ tầng, khẳng định chủ quyền.</p>'}
+];
+
+/* Build map hotspots */
+var container=document.getElementById('mapContainer');
+var tooltip=document.getElementById('mapTooltip');
+
+P.forEach(function(p,i){
+  var hs=document.createElement('div');
+  hs.className='hotspot';hs.style.left=p[7]+'%';hs.style.top=p[8]+'%';
+  hs.setAttribute('data-idx',i);container.appendChild(hs);
+  hs.addEventListener('mouseenter',function(){
+    var html='<strong>'+p[0]+'</strong>';
+    if(p[2])html+='<span class="tt-merged">★ '+p[3]+'</span>';
+    else html+='<span class="tt-kept">✓ Giữ nguyên</span>';
+    tooltip.innerHTML=html;tooltip.style.left=p[7]+'%';tooltip.style.top=p[8]+'%';tooltip.style.opacity='1';
+  });
+  hs.addEventListener('mouseleave',function(){tooltip.style.opacity='0'});
+  hs.addEventListener('click',function(){openPanel(i)});
+});
+
+islands.forEach(function(isl){
+  var hs=document.createElement('div');
+  hs.className='hotspot island-hs';hs.style.left=isl.x+'%';hs.style.top=isl.y+'%';
+  container.appendChild(hs);
+  hs.addEventListener('mouseenter',function(){
+    tooltip.innerHTML='<strong>'+isl.name+'</strong><span class="tt-merged">Chủ quyền Việt Nam</span>';
+    tooltip.style.left=isl.x+'%';tooltip.style.top=isl.y+'%';tooltip.style.opacity='1';
+  });
+  hs.addEventListener('mouseleave',function(){tooltip.style.opacity='0'});
+  hs.addEventListener('click',function(){
+    document.getElementById('panelTitle').textContent=isl.name;
+    document.getElementById('panelSub').textContent='Quần đảo thuộc chủ quyền Việt Nam';
+    document.getElementById('panelBody').innerHTML=isl.desc;
+    document.getElementById('overlay').classList.add('show');
+    document.getElementById('provPanel').classList.add('open');
+  });
+});
+
+/* Merge table */
+var tbody=document.getElementById('mergeTableBody');
+P.forEach(function(p,i){
+  var tr=document.createElement('tr');tr.style.cursor='pointer';
+  tr.addEventListener('click',function(){openPanel(i)});
+  var isCity=p[1].indexOf('TP')!==-1;
+  tr.innerHTML='<td>'+(i+1)+'</td><td><strong>'+p[0]+'</strong></td><td>'+(p[2]?p[3]:'— (giữ nguyên)')+'</td><td>'+(isCity?'<span class="city-badge">TP TW</span>':'Tỉnh')+'</td>';
+  tbody.appendChild(tr);
+});
+
+function openPanel(i){
+  var p=P[i];
+  document.getElementById('panelTitle').textContent=p[0];
+  document.getElementById('panelSub').textContent=p[1]+(p[2]?' · Sau sáp nhập':' · Giữ nguyên');
+  var html='<p>'+p[4]+'</p>';
+  if(p[2])html+='<p><span class="pp-tag">Sáp nhập từ: '+p[3]+'</span></p>';
+  html+='<p><strong>Diện tích:</strong> '+p[5]+'</p><p><strong>Dân số:</strong> '+p[6]+'</p>';
+  document.getElementById('panelBody').innerHTML=html;
+  document.getElementById('overlay').classList.add('show');
+  document.getElementById('provPanel').classList.add('open');
+}
+function closePanel(){document.getElementById('overlay').classList.remove('show');document.getElementById('provPanel').classList.remove('open')}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closePanel()});
+
+/* Tab switch */
+function switchTab(e,tabId){
+  document.querySelectorAll('.tab-content').forEach(function(t){t.classList.remove('active')});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+  document.getElementById(tabId).classList.add('active');e.target.classList.add('active');
+}
+
+/* Nav active on scroll */
+var navLinks=document.querySelectorAll('.nav-bar a');
+window.addEventListener('scroll',function(){
+  var sp=window.scrollY+110;
+  navLinks.forEach(function(link){
+    var href=link.getAttribute('href');
+    if(!href||href.charAt(0)!=='#')return;
+    var sec=document.querySelector(href);
+    if(sec&&sec.offsetTop<=sp&&sec.offsetTop+sec.offsetHeight>sp){
+      navLinks.forEach(function(l){l.classList.remove('active')});
+      link.classList.add('active');
+    }
+  });
+});
+
+/* Reveal animation */
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+
+/* Counter animation */
+var cObs=new IntersectionObserver(function(entries){entries.forEach(function(e){
+  if(e.isIntersecting){
+    var el=e.target,t=parseInt(el.getAttribute('data-target')),c=0,inc=Math.ceil(t/55);
+    var timer=setInterval(function(){c+=inc;if(c>=t){c=t;clearInterval(timer)}el.textContent=c.toLocaleString('vi-VN')},28);
+    cObs.unobserve(el);
+  }
+})},{threshold:.5});
+document.querySelectorAll('.stat-number').forEach(function(el){cObs.observe(el)});
+
+/* ===== QUIZ PARTICLES ===== */
+(function(){
+  var pc=document.getElementById('particles');
+  var colors=['rgba(255,213,79,0.3)','rgba(38,166,154,0.2)','rgba(21,101,192,0.2)','rgba(255,255,255,0.1)'];
+  for(var i=0;i<20;i++){
+    var p=document.createElement('div');p.className='particle';
+    var sz=Math.random()*4+2;p.style.width=sz+'px';p.style.height=sz+'px';
+    p.style.left=Math.random()*100+'%';p.style.background=colors[Math.floor(Math.random()*colors.length)];
+    p.style.animationDuration=(Math.random()*15+10)+'s';p.style.animationDelay=(Math.random()*10)+'s';
+    pc.appendChild(p);
+  }
+})();
+
+/* ===== QUIZ QUESTIONS ===== */
+var questions=[
+  {cat:"Hoàng Sa & Trường Sa",icon:"🏝️",q:"Quần đảo Hoàng Sa cách thành phố Đà Nẵng khoảng bao xa?",
+   opts:["~100 hải lý","~170 hải lý","~250 hải lý","~320 hải lý"],ans:1,
+   exp:"Quần đảo Hoàng Sa nằm cách Đà Nẵng khoảng 170 hải lý (khoảng 315 km) về phía Đông."},
+  {cat:"Hoàng Sa & Trường Sa",icon:"🏝️",q:"Quần đảo Trường Sa hiện thuộc huyện nào, tỉnh nào của Việt Nam?",
+   opts:["Huyện Trường Sa, tỉnh Khánh Hòa","Huyện Hoàng Sa, TP Đà Nẵng","Huyện Lý Sơn, tỉnh Quảng Ngãi","Huyện Côn Đảo, tỉnh Bà Rịa-VT"],ans:0,
+   exp:"Huyện Trường Sa thuộc tỉnh Khánh Hòa (sau sáp nhập 2025 bao gồm cả Ninh Thuận)."},
+  {cat:"Hoàng Sa & Trường Sa",icon:"🏝️",q:"Trung Quốc dùng vũ lực chiếm đóng trái phép quần đảo Hoàng Sa vào năm nào?",
+   opts:["1956","1974","1979","1988"],ans:1,
+   exp:"Tháng 1/1974, Trung Quốc dùng vũ lực đánh chiếm toàn bộ quần đảo Hoàng Sa."},
+  {cat:"Hoàng Sa & Trường Sa",icon:"🏝️",q:"Quần đảo Hoàng Sa gồm bao nhiêu đảo, bãi đá, bãi cạn?",
+   opts:["Hơn 15","Hơn 30","Hơn 50","Hơn 100"],ans:1,
+   exp:"Quần đảo Hoàng Sa gồm hơn 30 đảo, bãi đá và bãi cạn, chia thành 2 nhóm: Lưỡi Liềm và An Vĩnh."},
+  {cat:"Hoàng Sa & Trường Sa",icon:"🏝️",q:"Việt Nam hiện đang quản lý bao nhiêu thực thể tại quần đảo Trường Sa?",
+   opts:["9 thực thể","21 thực thể","33 thực thể","48 thực thể"],ans:1,
+   exp:"Việt Nam quản lý 21 đảo và thực thể tại Trường Sa."},
+  {cat:"Lịch sử chủ quyền",icon:"📜",q:"Đội Hoàng Sa được thành lập dưới thời nào?",
+   opts:["Thời Lý","Thời Trần","Thời Chúa Nguyễn (TK XVII)","Thời Nguyễn (TK XIX)"],ans:2,
+   exp:"Từ thế kỷ XVII, các Chúa Nguyễn đã lập Đội Hoàng Sa và Đội Bắc Hải."},
+  {cat:"Lịch sử chủ quyền",icon:"📜",q:"Vua nào chính thức cắm cờ tuyên bố chủ quyền tại Hoàng Sa năm 1816?",
+   opts:["Vua Minh Mạng","Vua Gia Long","Vua Tự Đức","Vua Thiệu Trị"],ans:1,
+   exp:"Năm 1816, Vua Gia Long chính thức cắm cờ và tuyên bố chủ quyền tại Hoàng Sa."},
+  {cat:"Lịch sử chủ quyền",icon:"📜",q:"Vua Minh Mạng đã làm gì tại Hoàng Sa vào năm 1835?",
+   opts:["Xây cảng biển thương mại","Xây miếu, dựng bia, trồng cây, đo thủy trình","Xây dựng pháo đài quân sự","Khai thác mỏ vàng"],ans:1,
+   exp:"Năm 1835, Vua Minh Mạng cho xây miếu, dựng bia chủ quyền, trồng cây và đo đạc thủy trình."},
+  {cat:"Lịch sử chủ quyền",icon:"📜",q:"Luật Biển Việt Nam được Quốc hội thông qua năm nào?",
+   opts:["2005","2008","2012","2015"],ans:2,
+   exp:"Luật Biển Việt Nam được Quốc hội thông qua ngày 21/6/2012."},
+  {cat:"Lịch sử chủ quyền",icon:"📜",q:"Việt Nam phê chuẩn UNCLOS 1982 vào năm nào?",
+   opts:["1986","1990","1994","1998"],ans:2,
+   exp:"Quốc hội Việt Nam phê chuẩn UNCLOS 1982 vào năm 1994."},
+  {cat:"Pháp luật & Quyền",icon:"⚖️",q:"Vùng đặc quyền kinh tế (UNCLOS) mở rộng tối đa bao nhiêu hải lý?",
+   opts:["12 hải lý","24 hải lý","100 hải lý","200 hải lý"],ans:3,
+   exp:"Vùng đặc quyền kinh tế (EEZ) mở rộng tối đa 200 hải lý tính từ đường cơ sở."},
+  {cat:"Pháp luật & Quyền",icon:"⚖️",q:"Điều 45 Hiến pháp 2013 quy định gì về bảo vệ Tổ quốc?",
+   opts:["Chỉ là quyền của công dân","Là nghĩa vụ thiêng liêng và quyền cao quý","Chỉ dành cho quân nhân","Không bắt buộc"],ans:1,
+   exp:"Điều 45 HP 2013: 'Bảo vệ Tổ quốc là nghĩa vụ thiêng liêng và quyền cao quý của công dân.'"},
+  {cat:"Pháp luật & Quyền",icon:"⚖️",q:"Lãnh hải Việt Nam rộng bao nhiêu hải lý?",
+   opts:["6 hải lý","12 hải lý","24 hải lý","200 hải lý"],ans:1,
+   exp:"Lãnh hải Việt Nam rộng 12 hải lý tính từ đường cơ sở."},
+  {cat:"Pháp luật & Quyền",icon:"⚖️",q:"Tội phản bội Tổ quốc (Đ.108 BLHS) có hình phạt tối đa là gì?",
+   opts:["Tù chung thân","Tử hình","Tù 20 năm","Tù 15 năm"],ans:1,
+   exp:"Điều 108 BLHS 2015: phạt tù 12–20 năm, chung thân hoặc tử hình."},
+  {cat:"Pháp luật & Quyền",icon:"⚖️",q:"Luật Biên giới quốc gia được ban hành năm nào?",
+   opts:["1999","2001","2003","2006"],ans:2,
+   exp:"Luật BGQG số 06/2003/QH11 được Quốc hội thông qua ngày 17/6/2003."},
+  {cat:"Biên giới Việt Nam",icon:"🗺️",q:"Đường biên giới đất liền Việt Nam dài bao nhiêu km?",
+   opts:["~3.260 km","~4.639 km","~5.120 km","~6.200 km"],ans:1,
+   exp:"Đường biên giới đất liền dài khoảng 4.639 km, tiếp giáp TQ, Lào và Campuchia."},
+  {cat:"Biên giới Việt Nam",icon:"🗺️",q:"Biên giới Việt Nam – Lào dài khoảng bao nhiêu km?",
+   opts:["~1.245 km","~1.449 km","~2.340 km","~3.000 km"],ans:2,
+   exp:"Biên giới VN – Lào dài ~2.340 km, là tuyến dài nhất."},
+  {cat:"Biên giới Việt Nam",icon:"🗺️",q:"Hiệp ước biên giới đất liền VN – TQ được ký năm nào?",
+   opts:["1991","1995","1999","2003"],ans:2,
+   exp:"Hiệp ước biên giới đất liền VN – TQ ký ngày 30/12/1999."},
+  {cat:"Biên giới Việt Nam",icon:"🗺️",q:"Bờ biển Việt Nam dài khoảng bao nhiêu km?",
+   opts:["~2.800 km","~3.260 km","~3.600 km","~4.200 km"],ans:1,
+   exp:"Bờ biển dài khoảng 3.260 km, từ Quảng Ninh đến Cà Mau."},
+  {cat:"Biên giới Việt Nam",icon:"🗺️",q:"Thác Bản Giốc nằm ở biên giới VN với nước nào?",
+   opts:["Lào","Campuchia","Trung Quốc","Myanmar"],ans:2,
+   exp:"Thác Bản Giốc nằm tại tỉnh Cao Bằng, biên giới VN – TQ."},
+  {cat:"Hành chính 2026",icon:"🏛️",q:"Nghị quyết 202/2025 sáp nhập từ bao nhiêu tỉnh thành xuống còn 34?",
+   opts:["48","55","58","63"],ans:3,
+   exp:"Sáp nhập từ 63 tỉnh thành xuống còn 34 (28 tỉnh + 6 TP TW)."},
+  {cat:"Hành chính 2026",icon:"🏛️",q:"TP nào trở thành TP trực thuộc TW từ 2025?",
+   opts:["Nha Trang","Đà Lạt","Huế","Quy Nhơn"],ans:2,
+   exp:"Huế trở thành TP trực thuộc TW từ 2025, nâng tổng lên 6."},
+  {cat:"Hành chính 2026",icon:"🏛️",q:"Tỉnh Lào Cai mới sáp nhập từ đơn vị nào?",
+   opts:["Lào Cai + Lai Châu","Yên Bái + Lào Cai","Lào Cai + Sơn La","Hà Giang + Lào Cai"],ans:1,
+   exp:"Tỉnh Lào Cai mới = Yên Bái + Lào Cai cũ, bao gồm đỉnh Fansipan."},
+  {cat:"Hành chính 2026",icon:"🏛️",q:"Mũi Cà Mau thuộc tỉnh nào sau sáp nhập 2026?",
+   opts:["Cần Thơ","An Giang","Cà Mau","Vĩnh Long"],ans:2,
+   exp:"Tỉnh Cà Mau mới (Bạc Liêu + Cà Mau) bao gồm Mũi Cà Mau."},
+  {cat:"Hành chính 2026",icon:"🏛️",q:"Sau sáp nhập 2025, VN có bao nhiêu TP trực thuộc TW?",
+   opts:["4","5","6","7"],ans:2,
+   exp:"6 TP TW: Hà Nội, TP HCM, Hải Phòng, Đà Nẵng, Cần Thơ và Huế."}
+];
+
+/* ===== QUIZ GAME STATE ===== */
+var qState={
+  difficulty:'easy',timeLimit:15,currentQ:0,score:0,streak:0,maxStreak:0,
+  correct:0,wrong:0,answers:[],timer:null,timeLeft:15,pool:[],total:15,bestScore:0
+};
+
+function selectDiff(el){
+  document.querySelectorAll('.diff-btn').forEach(function(b){b.classList.remove('selected')});
+  el.classList.add('selected');
+  qState.difficulty=el.getAttribute('data-diff');
+  var counts={easy:15,medium:20,hard:25};
+  qState.total=counts[qState.difficulty];
+  document.getElementById('totalQCount').textContent=qState.total;
+}
+
+function shuffle(arr){
+  var a=arr.slice();
+  for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=a[i];a[i]=a[j];a[j]=tmp;}
+  return a;
+}
+
+function showQScreen(id){
+  document.querySelectorAll('.qscreen').forEach(function(s){s.classList.remove('active')});
+  document.getElementById(id).classList.add('active');
+}
+
+function startGame(){
+  var tl={easy:15,medium:12,hard:8};
+  qState.timeLimit=tl[qState.difficulty];
+  qState.currentQ=0;qState.score=0;qState.streak=0;qState.maxStreak=0;
+  qState.correct=0;qState.wrong=0;qState.answers=[];
+  qState.pool=shuffle(questions).slice(0,qState.total);
+  showQScreen('qPlayScreen');
+  renderQuestion();
+}
+
+function renderQuestion(){
+  var q=qState.pool[qState.currentQ],total=qState.pool.length,letters=['A','B','C','D'];
+  document.getElementById('hudQuestion').textContent=(qState.currentQ+1)+'/'+total;
+  document.getElementById('hudScore').textContent=qState.score;
+  document.getElementById('progressFill').style.width=((qState.currentQ)/total*100)+'%';
+
+  var html='<div class="q-category"><span>'+q.icon+'</span> '+q.cat+'</div>';
+  html+='<div class="q-text">'+q.q+'</div><div class="options-list" id="optionsList">';
+  q.opts.forEach(function(opt,i){
+    html+='<button class="option-btn" data-idx="'+i+'" onclick="selectAnswer('+i+')"><span class="opt-letter">'+letters[i]+'</span><span>'+opt+'</span></button>';
+  });
+  html+='</div><div id="explanationArea"></div><div id="nextBtnArea"></div>';
+  document.getElementById('questionCard').innerHTML=html;
+  startTimer();
+}
+
+function startTimer(){
+  qState.timeLeft=qState.timeLimit;
+  var circ=2*Math.PI*26,ring=document.getElementById('timerRing'),text=document.getElementById('timerText');
+  ring.style.strokeDashoffset='0';ring.classList.remove('danger');text.classList.remove('danger');text.textContent=qState.timeLeft;
+  clearInterval(qState.timer);
+  qState.timer=setInterval(function(){
+    qState.timeLeft--;text.textContent=qState.timeLeft;
+    ring.style.strokeDashoffset=((1-qState.timeLeft/qState.timeLimit)*circ).toFixed(2);
+    if(qState.timeLeft<=3){ring.classList.add('danger');text.classList.add('danger')}
+    if(qState.timeLeft<=0){clearInterval(qState.timer);timeUp()}
+  },1000);
+}
+
+function timeUp(){
+  var q=qState.pool[qState.currentQ];qState.streak=0;qState.wrong++;
+  qState.answers.push({q:q.q,correct:false,userAns:'Hết giờ',correctAns:q.opts[q.ans]});
+  document.querySelectorAll('.option-btn').forEach(function(b,i){b.classList.add('disabled');if(i===q.ans)b.classList.add('correct')});
+  showExp(q,false,true);showNextBtn();
+}
+
+function selectAnswer(idx){
+  clearInterval(qState.timer);
+  var q=qState.pool[qState.currentQ],ok=idx===q.ans;
+  document.querySelectorAll('.option-btn').forEach(function(b,i){b.classList.add('disabled');if(i===q.ans)b.classList.add('correct');if(i===idx&&!ok)b.classList.add('wrong')});
+  if(ok){
+    qState.streak++;if(qState.streak>qState.maxStreak)qState.maxStreak=qState.streak;qState.correct++;
+    qState.score+=10+Math.round(qState.timeLeft/qState.timeLimit*5)+Math.min(qState.streak-1,5);
+    if(qState.streak>=3)showStreakPopup(qState.streak);
+  }else{qState.streak=0;qState.wrong++}
+  qState.answers.push({q:q.q,correct:ok,userAns:q.opts[idx],correctAns:q.opts[q.ans]});
+  document.getElementById('hudScore').textContent=qState.score;
+  showExp(q,ok,false);showNextBtn();
+}
+
+function showExp(q,ok,isTimeUp){
+  var cls=ok?'explanation':'explanation wrong-exp';
+  var icon=ok?'<i class="fas fa-check-circle" style="color:var(--jade)"></i>':'<i class="fas fa-times-circle" style="color:var(--coral)"></i>';
+  var title=ok?'Chính xác!':(isTimeUp?'Hết giờ!':'Chưa đúng!');
+  document.getElementById('explanationArea').innerHTML='<div class="'+cls+'"><h4>'+icon+' '+title+'</h4><p>'+q.exp+'</p></div>';
+}
+
+function showNextBtn(){
+  var isLast=qState.currentQ>=qState.pool.length-1;
+  var label=isLast?'Xem kết quả <i class="fas fa-trophy"></i>':'Câu tiếp theo <i class="fas fa-arrow-right"></i>';
+  document.getElementById('nextBtnArea').innerHTML='<button class="next-btn" onclick="nextQuestion()">'+label+'</button>';
+}
+
+function showStreakPopup(streak){
+  var colors=['','','','var(--jade)','var(--wave-1)','var(--gold)','var(--coral)'];
+  var labels=['','','','🔥 x3 Combo!','⚡ x4 Tuyệt vời!','💎 x5 Siêu sao!','🌟 Huyền thoại!'];
+  var idx=Math.min(streak,6),el=document.createElement('div');
+  el.className='streak-popup';el.style.background=colors[idx]||'var(--gold)';
+  el.style.color=idx>=5?'var(--ocean-deep)':'#fff';
+  el.textContent=labels[idx]||('🔥 x'+streak+' Combo!');
+  document.body.appendChild(el);
+  setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el)},1600);
+}
+
+function nextQuestion(){
+  qState.currentQ++;
+  if(qState.currentQ>=qState.pool.length)showResults();
+  else{showQScreen('qPlayScreen');renderQuestion()}
+}
+
+function showResults(){
+  clearInterval(qState.timer);
+  var total=qState.pool.length,pct=Math.round(qState.correct/total*100);
+  if(qState.score>qState.bestScore)qState.bestScore=qState.score;
+
+  var grade,gradeColor,desc;
+  if(pct>=90){grade='🏆 Xuất Sắc!';gradeColor='var(--gold)';desc='Bạn hiểu rất rõ về chủ quyền biển đảo Việt Nam!';}
+  else if(pct>=70){grade='⭐ Giỏi!';gradeColor='var(--jade-light)';desc='Kiến thức tốt! Hãy tiếp tục tìm hiểu thêm.';}
+  else if(pct>=50){grade='📘 Khá!';gradeColor='var(--wave-1)';desc='Cần ôn lại thêm về biển đảo và biên giới.';}
+  else{grade='📖 Cần Cố Gắng';gradeColor='var(--coral)';desc='Hãy đọc thêm về chủ quyền biển đảo Việt Nam nhé!';}
+
+  var ringColor=pct>=70?'var(--jade)':pct>=50?'var(--gold)':'var(--coral)';
+  var circ=2*Math.PI*68,offset=circ*(1-pct/100);
+
+  var html='<div class="result-circle-wrap"><svg class="result-ring" viewBox="0 0 160 160">';
+  html+='<circle class="result-ring-bg" cx="80" cy="80" r="68"/>';
+  html+='<circle class="result-ring-fg" cx="80" cy="80" r="68" stroke="'+ringColor+'" stroke-dasharray="'+circ.toFixed(2)+'" stroke-dashoffset="'+circ.toFixed(2)+'" id="resultRingFg"/>';
+  html+='</svg><div class="result-score-text"><div class="result-score-num" style="color:'+gradeColor+'">'+pct+'%</div><div class="result-score-label">'+qState.correct+'/'+total+' câu đúng</div></div></div>';
+  html+='<div class="result-title" style="color:'+gradeColor+'">'+grade+'</div>';
+  html+='<div class="result-desc">'+desc+'</div>';
+  html+='<div class="result-stats">';
+  html+='<div class="r-stat"><div class="r-stat-icon">💰</div><div class="r-stat-val" style="color:var(--gold)">'+qState.score+'</div><div class="r-stat-lab">Tổng điểm</div></div>';
+  html+='<div class="r-stat"><div class="r-stat-icon">🔥</div><div class="r-stat-val" style="color:var(--coral)">'+qState.maxStreak+'</div><div class="r-stat-lab">Chuỗi dài nhất</div></div>';
+  html+='<div class="r-stat"><div class="r-stat-icon">⏱️</div><div class="r-stat-val" style="color:var(--jade-light)">'+qState.difficulty.charAt(0).toUpperCase()+qState.difficulty.slice(1)+'</div><div class="r-stat-lab">Độ khó</div></div>';
+  html+='</div>';
+  html+='<div class="result-review"><h3><i class="fas fa-clipboard-list"></i> Xem lại đáp án</h3>';
+  qState.answers.forEach(function(a,i){
+    var cls=a.correct?'review-item ri-correct':'review-item ri-wrong';
+    var icon=a.correct?'<i class="fas fa-check-circle" style="color:var(--jade)"></i>':'<i class="fas fa-times-circle" style="color:var(--coral)"></i>';
+    html+='<div class="'+cls+'"><div class="ri-icon">'+icon+'</div><div><div class="ri-q"><strong>Câu '+(i+1)+':</strong> '+a.q+'</div>';
+    if(!a.correct)html+='<div class="ri-ans">Bạn chọn: '+a.userAns+' → Đáp án: '+a.correctAns+'</div>';
+    html+='</div></div>';
+  });
+  html+='</div>';
+  html+='<div class="result-btns"><button class="btn-retry" onclick="startGame()"><i class="fas fa-redo"></i> Chơi lại</button>';
+  html+='<button class="btn-home" onclick="goQuizHome()"><i class="fas fa-home"></i> Về trang chủ</button></div>';
+
+  document.getElementById('resultCard').innerHTML=html;
+  showQScreen('qResultScreen');
+  setTimeout(function(){var fg=document.getElementById('resultRingFg');if(fg)fg.style.strokeDashoffset=offset.toFixed(2)},100);
+}
+
+function goQuizHome(){
+  document.getElementById('bestScoreDisplay').textContent=qState.bestScore;
+  showQScreen('qStartScreen');
+}
+</script>
+</body>
+</html>
